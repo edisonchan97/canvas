@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Canvas</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+			/*background: #ffffff;*/
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="Pikachu">
+			Your browser doesn't support the canvas!
+		</canvas>
+
+		<script>
+		var pika=document.getElementById('Pikachu');
+			pika.width = 500;
+			pika.height = 400;
+		var ctx = pika.getContext("2d");//获取该canvas的2D绘图环境对象
+
+			ctx.beginPath();
+			ctx.beginPath();
+			ctx.fillStyle = '#fce501';
+			ctx.arc(250,200,150,0,2*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+
+
+
+			ctx.beginPath();//重置画笔，避免污染
+			ctx.fillStyle = '#000000';//填充颜色是#000000
+			ctx.arc(175,160,27,0,2*Math.PI);//起始角度为0，结束角度为2π，圆心是(175.160)半径27
+			ctx.closePath();//画布上汇出确切路径
+			ctx.fill();//填充当前路径或者图像
+			ctx.stroke();//实际的绘出路径和图像
+			//黑色眼珠子
+
+			ctx.beginPath();
+			ctx.fillStyle = '#000000';
+			ctx.arc(325,160,27,0,2*Math.PI);//两个中间点是(250.160)
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.fillStyle = '#ffffff';
+			ctx.arc(165,150,8,0,2*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+			//俩大白眼球
+			
+			ctx.beginPath();
+			ctx.fillStyle = '#ffffff';
+			ctx.arc(315,150,8,0,2*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+
+
+
+			ctx.beginPath();
+			ctx.fillStyle = '#ed6b49';
+			ctx.arc(135,216,25,0,2*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+			// ctx.stroke();去掉绘制的圆的边框
+			//俩大粉红腮
+			
+			ctx.beginPath();
+			ctx.fillStyle = '#ed6b49';
+			ctx.arc(365,216,25,0,2*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+
+
+
+
+			ctx.beginPath();
+			ctx.fillStyle = '#000000';
+			ctx.arc(250,221,10,0*Math.PI,1*Math.PI);
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+			//小鼻子
+			
+			
+			ctx.beginPath();
+			ctx.lineWidth=6;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(180,248);//开始点
+			ctx.quadraticCurveTo(198,275,251,252);//前俩控制点，后俩结束点
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.lineWidth=6;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(310,248);//开始点
+			ctx.quadraticCurveTo(297,275,251,252);//前俩控制点，后俩结束点
+			ctx.stroke();
+
+
+			
+			
+		</script>
+	</body>
+	</html>	
