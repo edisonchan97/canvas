@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>樱桃小丸子</title>
+	<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+			background:pink;
+			}
+	</style>
+</head>
+<body>
+	<canvas id="Chibi-Maruko">
+			Your browser doesn't support the canvas!
+	</canvas>
+	<script>
+		var cherry=document.getElementById('Chibi-Maruko');
+		cherry.width=400;
+		cherry.height=400;
+		var ctx = cherry.getContext("2d");
+
+
+
+
+
+
+			// ctx.beginPath();//大脸轮廓
+			// ctx.lineWidth=6;
+			// ctx.strokeStyle='#000000';
+			// ctx.lineCap='round';
+			// ctx.moveTo(40,250);//开始点
+			// ctx.bezierCurveTo(50,359,350,350,360,250);
+			// //前俩控制点，后俩结束点
+			// ctx.stroke();
+
+
+
+			ctx.beginPath();//头发轮廓
+			ctx.lineWidth=6;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(10,200);//开始点
+			ctx.bezierCurveTo(0,-60,400,-60,390,200);
+			//前俩控制点，后俩结束点
+			ctx.stroke();
+
+
+
+
+
+	</script>	
+</body>
+</html>

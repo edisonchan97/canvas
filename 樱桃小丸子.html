@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>樱桃小丸子</title>
+	<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+			background:pink;
+			}
+	</style>
+</head>
+<body>
+	<canvas id="Chibi-Maruko">
+			Your browser doesn't support the canvas!
+	</canvas>
+	<script>
+		var cherry=document.getElementById('Chibi-Maruko');
+		cherry.width=400;
+		cherry.height=400;
+		var ctx = cherry.getContext("2d");
+
+
+			ctx.beginPath();
+			ctx.fillStyle = '#ed6b49';
+			ctx.lineWidth=6;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(160,250);//开始点
+			ctx.quadraticCurveTo(200,320,240,250);//前俩控制点，后俩结束点
+			ctx.moveTo(160,250);//开始点
+			ctx.quadraticCurveTo(200,255,240,250);//前俩控制点，后俩结束点
+			ctx.fill();
+			ctx.stroke();
+
+
+
+			ctx.beginPath();
+			ctx.fillStyle = '#F98C90';
+			ctx.arc(100,250,28,0,2*Math.PI);
+		var grd=ctx.createRadialGradient(100,250,1,100,250,30);
+			grd.addColorStop(0,"#F98C90");
+			grd.addColorStop(1,"pink");
+			ctx.fillStyle=grd;
+			ctx.closePath();
+			ctx.fill();
+			// ctx.stroke();去掉绘制的圆的边框
+			//俩大粉红腮
+			
+			ctx.beginPath();
+			ctx.fillStyle = '#F98C90';
+			ctx.arc(300,250,28,0,2*Math.PI);
+		var grd1=ctx.createRadialGradient(300,250,1,300,250,30);
+			grd1.addColorStop(0,"#F98C90");
+			grd1.addColorStop(1,"pink");
+			ctx.fillStyle=grd1;
+			ctx.closePath();
+			ctx.fill();
+
+
+
+
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(170,150);//开始点
+			ctx.quadraticCurveTo(140,130,110,160);//前俩控制点，后俩结束点
+			ctx.stroke();
+			//俩眼睛
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(230,150);//开始点
+			ctx.quadraticCurveTo(260,130,290,160);//前俩控制点，后俩结束点
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(170,70);//开始点
+			ctx.quadraticCurveTo(130,50,70,110);//前俩控制点，后俩结束点
+			ctx.stroke();
+			//俩眉毛
+			ctx.beginPath();
+			ctx.lineWidth=5;
+			ctx.strokeStyle='#000000';
+			ctx.lineCap='round';
+			ctx.moveTo(230,70);//开始点
+			ctx.quadraticCurveTo(270,50,330,110);//前俩控制点，后俩结束点
+			ctx.stroke();
+
+
+
+
+			// ctx.beginPath();//大脸轮廓
+			// ctx.lineWidth=6;
+			// ctx.strokeStyle='#000000';
+			// ctx.lineCap='round';
+			// ctx.moveTo(40,250);//开始点
+			// ctx.bezierCurveTo(50,359,350,350,360,250);
+			// //前俩控制点，后俩结束点
+			// ctx.stroke();
+
+
+
+			// ctx.beginPath();//头发轮廓
+			// ctx.lineWidth=6;
+			// ctx.strokeStyle='#000000';
+			// ctx.lineCap='round';
+			// ctx.moveTo(10,200);//开始点
+			// ctx.bezierCurveTo(0,-60,400,-60,390,200);
+			// //前俩控制点，后俩结束点
+			// ctx.stroke();
+
+
+
+
+
+	</script>	
+</body>
+</html>
